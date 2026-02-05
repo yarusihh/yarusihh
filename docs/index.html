@@ -1,491 +1,299 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruslan Malikov — Resume</title>
-
-  <link rel="icon" type="image/png" href="https://ui-avatars.com/api/?name=R.M.&background=1e293b&color=fff&size=64" />
-  <link rel="apple-touch-icon" href="https://ui-avatars.com/api/?name=R.M.&background=1e293b&color=fff&size=180" />
-  <link rel="shortcut icon" href="https://ui-avatars.com/api/?name=R.M.&background=1e293b&color=fff&size=64" />
-
-  <meta name="description" content="Resume of Ruslan Malikov — backend developer from Almaty with experience in Django, PostgreSQL, and systems integration." />
-  <meta name="keywords" content="Ruslan Malikov, resume, backend developer, Django, Python, CV, programmer, Almaty" />
-  <meta name="author" content="Ruslan Malikov" />
-  <meta name="theme-color" content="#1e293b" />
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Руслан Маликов — Резюме</title>
 
   <style>
-    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) }
-    .lang-btn { color: #64748b; transition: all .3s cubic-bezier(.4,0,.2,1); position: relative; overflow: hidden }
-    .lang-btn.active { background: linear-gradient(135deg, #fff 0%, #f8fafc 100%); color: #1e293b; box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06); border: 1px solid #e2e8f0; transform: translateY(-1px) }
-    .lang-btn:hover:not(.active) { background: rgba(255,255,255,.7); color: #334155; transform: translateY(-1px) }
-    .section-card { background: linear-gradient(135deg, #fff 0%, #fefefe 100%); border: 1px solid #e2e8f0; transition: all .4s cubic-bezier(.4,0,.2,1); position: relative; overflow: hidden }
-    .section-card:hover { transform: translateY(-2px); box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04) }
-    .header-gradient { background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%) }
-    .skill-tag { background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border: 1px solid #cbd5e1; transition: all .3s }
-    .skill-tag:hover { background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); transform: translateY(-1px); box-shadow: 0 4px 6px -1px rgba(0,0,0,.1) }
-    .timeline-dot { background: linear-gradient(135deg, #55657e 0%, #6366f1 100%); box-shadow: 0 0 0 4px rgba(59,130,246,.1) }
-    .achievement-badge { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 1px solid #f59e0b }
-    .contact-link { transition: all .3s ease; position: relative }
-    .contact-link:hover { transform: translateX(2px) }
-    .contact-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #55657e, #55657e); transition: width .3s ease }
-    .contact-link:hover::after { width: 100% }
-    .text-gradient { background: linear-gradient(135deg, #1e293b 0%, #475569 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text }
-    .section-header { position: relative; padding-bottom: 8px }
-    .section-header::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: linear-gradient(90deg, #55657e, #55657e); border-radius: 2px }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      font-size: 14px;
+      color: #222;
+      line-height: 1.6;
+      margin: 40px auto;
+      max-width: 750px;
+      padding: 0 20px;
+      background: #fff;
+      word-wrap: break-word;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 1.5em;
+      margin-bottom: 0.3em;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 18px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    ul {
+      padding-left: 1.2em;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.2em;
+    }
+
+    .meta {
+      color: #666;
+      font-size: 13px;
+    }
+
+    .contact {
+      margin-bottom: 1.5em;
+      line-height: 1.5;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 1.5em 0;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 600px) {
+
+      body {
+        margin: 10px auto;
+        padding: 0 14px;
+        font-size: 13px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+
+      .contact {
+        font-size: 13px;
+      }
+
+      ul {
+        padding-left: 1em;
+      }
+
+      hr {
+        margin: 1em 0;
+      }
+    }
+
+    /* ================= PRINT SAFE ================= */
+
+    @media print {
+      body {
+        margin: 0;
+        max-width: none;
+      }
+    }
   </style>
 </head>
 
-<body class="text-gray-800 leading-relaxed min-h-screen">
+<body>
 
-  <main class="max-w-4xl mx-auto px-4 py-8">
-    <div class="section-card rounded-2xl p-8 mb-8 header-gradient text-white">
-      <div class="flex justify-end mb-6">
-        <div class="flex gap-1 bg-black/20 backdrop-blur-sm rounded-xl border border-white/20 p-1">
-          <button class="lang-btn px-4 py-2 text-sm font-medium rounded-lg border border-transparent" data-lang="kk">KK</button>
-          <button class="lang-btn px-4 py-2 text-sm font-medium rounded-lg border border-transparent active" data-lang="en">EN</button>
-          <button class="lang-btn px-4 py-2 text-sm font-medium rounded-lg border border-transparent" data-lang="ru">RU</button>
-        </div>
-      </div>
+  <h1>Руслан Маликов</h1>
+  <div class="meta"><strong>Fullstack Web</strong><br>Алматы, Казахстан • 22 года</div>
 
-      <div class="grid md:grid-cols-3 gap-8 items-center">
-        <div class="md:col-span-2">
-          <h1 class="text-4xl md:text-5xl font-bold mb-2 tracking-tight">Ruslan Malikov</h1>
-          <p class="text-xl text-blue-100 mb-1 font-medium" data-key="position"></p>
-          <p class="text-blue-200/80 text-sm" data-key="location"></p>
+  <div class="contact">
+    <strong>Email:</strong>
+    <a href="mailto:mal.rus.ana@yandex.kz">mal.rus.ana@yandex.kz</a>,
+    <a href="mailto:mal.rus.ana@gmail.com">mal.rus.ana@gmail.com</a><br>
 
-          <div class="mt-6 space-y-3">
-          <div class="flex items-center gap-3 text-sm">
-              <div class="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-              <a class="contact-link text-blue-100 hover:text-white">mal.rus.ana@yandex.kz</a>
-            </div>
-            <div class="flex items-center gap-3 text-sm">
-              <div class="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-              <span class="text-blue-100">+7 700 555 99 88</span>
-            </div>
-            <div class="flex items-center gap-6 mt-4 text-sm">
-              <a href="https://github.com/rYsix" class="contact-link text-blue-100 hover:text-white flex items-center gap-2">
-                <div class="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-                GitHub
-              </a>
-              <a href="https://t.me/rusihhh" class="contact-link text-blue-100 hover:text-white flex items-center gap-2">
-                <div class="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-                Telegram
-              </a>
-              <a href="https://www.credly.com/users/ruslan-malikov.b03ad664" class="contact-link text-blue-100 hover:text-white flex items-center gap-2">
-                <div class="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-                Credly
-              </a>
-              <a href="https://www.linkedin.com/in/ruslan-malikov-dev/" class="contact-link text-blue-100 hover:text-white flex items-center gap-2">
-                <div class="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-                LinkedIn
-              </a>
+    <strong>Телефон:</strong> +7 700 555 99 88<br>
 
-            </div>
-            <p class="text-blue-200/80 text-sm" data-key="motto"></p>
-          </div>
-        </div>
+    <strong>Ссылки:</strong>
+    <a href="https://github.com/yarusihh">GitHub</a> 
+    <a href="https://t.me/yarusihhh">Telegram</a> 
+    <a href="https://www.linkedin.com/in/ruslan-malikov-962206376">LinkedIn</a> 
+    <a href="https://www.credly.com/users/ruslan-malikov.b03ad664">Credly</a> 
+    <a href="https://yarusihh.github.io/yarusihh/">Resume Website</a> 
+    <a href="https://icpc.global/ICPCID/LHJP61WYGDBF">ICPC Global Profile</a><br>
 
-        <div class="hidden md:flex justify-center">
-          <div class="w-32 h-32 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
-            <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
-              <span class="text-2xl font-bold">RM</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <strong>Сертификаты:</strong>
+    <a href="https://drive.google.com/drive/folders/1KE3vAfnHY_KKyviQARGv8TmY5dgrHOYd?usp=drive_link">папка</a>
+  </div>
 
-    <div class="grid lg:grid-cols-3 gap-8">
-      <div class="lg:col-span-2 space-y-8">
-        <div class="section-card rounded-2xl p-6">
-          <h2 class="text-2xl font-semibold text-gradient section-header mb-6" data-key="about_title"></h2>
-          <div class="space-y-4">
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-gray-700" data-key="about_1"></p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-gray-700" data-key="about_2"></p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-gray-700" data-key="about_3"></p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-gray-700" data-key="about_5"></p>
-            </div>
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-gray-700" data-key="about_4"></p>
-            </div>
-          </div>
-        </div>
+  <hr>
 
-        <div class="section-card rounded-2xl p-6">
-          <h2 class="text-2xl font-semibold text-gradient section-header mb-6" data-key="experience_title"></h2>
+  <h2>О себе — кратко</h2>
+  <ul>
+    <li>Из интересного: Будучи студентом, разработали как основной сайт университета, так и внутренние порталы/сервисы с
+      PHP на Django</li>
+    <li>Из интересного: Резюме хранится в JSON-формате на Git, после чего конвертируется в HTML, а затем в PDF</li>
+    <li>Люблю продумывать архитектуру, оптимизацию, метрики и логирование</li>
+    <li>Поддерживал проекты на PHP, разрабатывал современные веб-сервисы</li>
+    <li>Окончил Cisco Networking Academy (CCNA, CCNP, CCNA Security)</li>
+    <li>Интересуюсь спортивным программированием, хакатонами и CTF</li>
+    <li>Explicit is better than implicit</li>
+    <li>С 2026 в работе активно применяю ИИ для прикладных/тонких задач по коду</li>
+  </ul>
 
-          <div class="relative">
-            <div class="absolute left-6 top-8 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-transparent"></div>
+  <hr>
 
-            <div class="relative">
-              <div class="timeline-dot absolute left-4 top-4 w-4 h-4 rounded-full"></div>
-              <div class="ml-16">
-                <div class="bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-5 border border-blue-100">
-                  <h3 class="text-lg font-semibold text-gray-900 mb-1" data-key="job_title"></h3>
-                  <p class="text-sm text-blue-600 font-medium mb-4" data-key="job_period"></p>
+  <h2>Навыки</h2>
+  <ul>
+    <li><strong>Уверенно:</strong> Python, Django/DRF, Базы данных (SQL: PostgreSQL, NoSQL: MongoDB, Redis), REST
+      архитектура, Сети TCP/IP OSI L2 L3, Docker, Linux, Nginx, Git/Github/Gitlab, HTML/CSS</li>
+    <li><strong>Средне:</strong> Java/Spring Boot, C#/.NET, JavaScript, PHP (Yii2), SharePoint</li>
+    <li><strong>Базово:</strong> Flutter, Machine Learning, React</li>
+  </ul>
 
-                  <div class="space-y-3">
-                    <div class="flex items-start gap-3">
-                      <div class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <p class="text-gray-700 text-sm" data-key="job_1"></p>
-                    </div>
-                    <div class="flex items-start gap-3">
-                      <div class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <p class="text-gray-700 text-sm" data-key="job_2"></p>
-                    </div>
-                    <div class="flex items-start gap-3">
-                      <div class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <p class="text-gray-700 text-sm" data-key="job_3"></p>
-                    </div>
-                    <div class="flex items-start gap-3">
-                      <div class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <p class="text-gray-700 text-sm" data-key="job_4"></p>
-                    </div>
-                    <div class="flex items-start gap-3">
-                      <div class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <p class="text-gray-700 text-sm" data-key="job_5"></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <hr>
 
-        <div class="section-card rounded-2xl p-6">
-          <h2 class="text-2xl font-semibold text-gradient section-header mb-6" data-key="projects_title"></h2>
+  <h2>Технический опыт</h2>
+  <ul>
+    <li>Асинхронность и многопоточность</li>
+    <li>Паттерны проектирования</li>
+    <li>Авторизация, сессии и работа с токенами</li>
+    <li>Вебхуки и событийные интеграции (включая Stripe)</li>
+    <li>Разработка Telegram-ботов и Discord-ботов</li>
+    <li>Опыт с Flask и FastAPI</li>
+    <li>Опыт разработки на React</li>
+    <li>Интеграции внешних API</li>
+    <li>Разработка десктоп-приложений на PyQt5/PyQt6</li>
+    <li>Опыт с PyDivert и WinDivert (перехват и анализ сетевых пакетов)</li>
+    <li>Работа с кешированием (in-memory, file-based, TTL-механизмы)</li>
+    <li>Деплой и сопровождение backend-сервисов (Docker, Linux)</li>
+    <li>Понимание принципов работы компьютера (оперативная память, стек/куча, адресация, смещения, виртуальная память)
+    </li>
+    <li>Работа с сетевыми сервисами (DNS, VPN, почтовые сервисы), настройка и развертывание</li>
+    <li>Java backend (Spring Boot, REST API)</li>
+    <li>Работа с MongoDB и Redis</li>
+    <li>Интеграция сервисов через Kafka</li>
+    <li>Trello</li>
+    <li>GitHub</li>
+    <li>GitLab</li>
+  </ul>
 
-          <div class="bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-5 border border-blue-100">
-            <div class="flex items-start gap-4">
-              <div class="w-3 h-3 bg-green-500 rounded-full mt-1 flex-shrink-0"></div>
-              <div>
-                <h3 class="font-semibold text-gray-900 mb-1">boost.house</h3>
-                <p class="text-gray-700 text-sm mb-2" data-key="project_desc"></p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="skill-tag px-2 py-1 text-xs rounded-lg text-gray-600">Django</span>
-                  <span class="skill-tag px-2 py-1 text-xs rounded-lg text-gray-600">PostgreSQL</span>
-                  <span class="skill-tag px-2 py-1 text-xs rounded-lg text-gray-600">REST API</span>
-                  <span class="skill-tag px-2 py-1 text-xs rounded-lg text-gray-600">Payments</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <hr>
 
-      </div>
+  <h2>Опыт работы</h2>
 
-      <div class="space-y-8">
-        <div class="section-card rounded-2xl p-6">
-          <h2 class="text-xl font-semibold text-gradient section-header mb-6" data-key="skills_title"></h2>
+  <h3>НАО Алматинский университет энергетики и связи (AUES) — Программист</h3>
+  <div class="meta">2024-02 — продолжается • 2 года (продолжается)</div>
+  <ul>
+    <li>Миграция внутренних сервисов с PHP на современные веб-стеки</li>
+    <li>Разработка и поддержка сайтов с нуля: <a href="https://energo.university/">energo.university</a>, cpk.aues.kz,
+      ipphone.aues.kz, recovery.aues.kz, stud-assist.aues.kz и др.</li>
+    <li>Разработка проекта: <a href="https://nyfa-kaz.com/en/">nyfa-kaz.com</a> (вебхуки, обмен данными о студентах с
+      Нью-Йорком)</li>
+    <li>Интеграция с Банком ЦентрКредит (эквайринг/вебхуки)</li>
+    <li>Разработка тикет-системы HelpDesk DIT (MS SharePoint + MS Power Automate)</li>
+    <li>Интеграции LDAP, SharePoint, Microsoft Automate, SMSC</li>
+    <li>Сетевые настройки и мониторинг внутренних сервисов</li>
+    <li>FaceID десктоп-приложение (WinForms C#)</li>
+    <li>Python CLI-утилиты для обработки изображений перед загрузкой в базу Hikvision</li>
+  </ul>
 
-          <div class="space-y-6">
-            <div>
-              <h3 class="font-medium text-gray-900 mb-3 text-sm uppercase tracking-wide" data-key="skills_confident"></h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-700 font-medium">Python</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-700 font-medium">Django</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-700 font-medium">Docker</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-700 font-medium">Linux</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-700 font-medium">Git</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-700 font-medium">TCP/IP</span>
-              </div>
-            </div>
+  <h3>ТОО BARAKAT SOLUTIONS — Программист</h3>
+  <div class="meta">2025-10 — продолжается</div>
+  <div class="meta">Мобильное приложение в Google Play и iOS</div>
+  <ul>
+    <li><strong>Стек:</strong> Flutter</li>
+  </ul>
 
-            <div>
-              <h3 class="font-medium text-gray-900 mb-3 text-sm uppercase tracking-wide" data-key="skills_intermediate"></h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-600">PostgreSQL</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-600">JavaScript</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-600">PHP/yii2</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-600">SharePoint</span>
-              </div>
-            </div>
+  <hr>
 
-            <div>
-              <h3 class="font-medium text-gray-900 mb-3 text-sm uppercase tracking-wide" data-key="skills_basic"></h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-500">ML</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-500">C#</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-500">C++</span>
-                <span class="skill-tag px-3 py-1.5 text-xs rounded-lg text-gray-500">React</span>
-              </div>
-            </div>
-          </div>
-        </div>
+  <h2>Фриланс / коммерческие проекты</h2>
 
-        <div class="section-card rounded-2xl p-6">
-          <h2 class="text-xl font-semibold text-gradient section-header mb-6" data-key="education_title"></h2>
+  <p><strong>boost.house</strong> — paid freelance project<br>
+    <span class="meta">
+      Коммерческая платформа игровых услуг с многовалютной, динамической и мультиязычной логикой: многоэтапная обработка
+      заказов, управление состояниями и бизнес-инвариантами.
+      Из интересного: каждая ошибка на сайте обрабатывается гарантированно и собирается умный отчёт о том, сколько и
+      какие страницы видели пользователи по важности.
+      <br><strong>Стек:</strong> Django, PostgreSQL, Payments интеграция с Stripe (эквайринг/вебхуки), REST API, Logging
+      <br><strong>URL:</strong> <a href="https://boost.house">https://boost.house</a>
+    </span>
+  </p>
 
-          <div class="space-y-4">
-            <div class="p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border border-blue-100">
-              <h3 class="font-semibold text-gray-900 text-sm mb-1">AUES</h3>
-              <p class="text-gray-700 text-sm" data-key="edu_1"></p>
-            </div>
+  <hr>
 
-            <div class="p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border border-blue-100">
-              <h3 class="font-semibold text-gray-900 text-sm mb-2" data-key="edu_2_title"></h3>
-              <div class="space-y-2 text-sm">
-                <div class="flex items-start gap-2">
-                  <div class="w-1 h-1 bg-blue-400 rounded-full mt-2"></div>
-                  <p class="text-gray-700" data-key="edu_2a"></p>
-                </div>
-                <div class="flex items-start gap-2">
-                  <div class="w-1 h-1 bg-blue-400 rounded-full mt-2"></div>
-                  <p class="text-gray-700" data-key="edu_2b"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <h2>Pet-проекты</h2>
+  <p><strong>Desktop Utility</strong><br>
+    <span class="meta">Десктоп-утилита для анализа сетевого трафика и действий клавиатуры. Использовалась мной и
+      несколькими реальными пользователями.</span>
+  </p>
+  <ul>
+    <li>Интерфейс на PyQt5 → PyQt6</li>
+    <li>Многопоточная обработка</li>
+    <li>Перехват и фильтрация трафика (PyDivert / WinDivert)</li>
+    <li>Оптимизация и приоритезация сетевого трафика на уровне приложений</li>
+    <li>Перехват действий клавиатуры (hotkeys / event hooks)</li>
+  </ul>
+  <div class="meta"><strong>Технологии:</strong> PyQt5/PyQt6, Python threading, PyDivert / WinDivert</div>
 
-        <div class="section-card rounded-2xl p-6">
-          <h2 class="text-xl font-semibold text-gradient section-header mb-6" data-key="languages_title"></h2>
+  <hr>
 
-          <div class="space-y-3">
-            <div class="flex items-center justify-between p-3 bg-gradient-to-r from-slate-50 to-blue-50 rounded-lg border border-blue-100">
-              <span class="text-sm font-medium text-gray-900" data-key="lang_russian"></span>
-              <div class="flex gap-1">
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-              </div>
-            </div>
-            <div class="flex items-center justify-between p-3 bg-gradient-to-r from-slate-50 to-blue-50 rounded-lg border border-blue-100">
-              <span class="text-sm font-medium text-gray-900" data-key="lang_english"></span>
-              <div class="flex gap-1">
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <h2>Образование</h2>
+  <ul>
+    <li><strong>Алматинский университет энергетики и связи (AUES)</strong> — Бакалавриат, Вычислительная техника и ПО
+      (2025) — 4 года (очная)</li>
+    <li><strong>Компьютерная академия ШАГ</strong> — Сетевой инженер, Cisco CCNA/CCNP, Linux (2022) — оффлайн</li>
+    <li><strong>Компьютерная академия ШАГ</strong> — Программист, Python/Django, C++, C#, Docker (2025) — оффлайн</li>
+    <li><strong>Kaspi Lab [SE]</strong> — Java Backend (2025) — 6 недель (Java 11–21, Spring Boot)</li>
+    <li><strong>Учебно-тренировочные сборы Федерации спортивного программирования Казахстана</strong> — 2023 (26 июля —
+      6 августа) — 11 дней<br>
+      <span class="meta">Второй дивизион сборов по спортивному программированию</span>
+    </li>
+  </ul>
 
-      </div>
-    </div>
+  <hr>
 
-    <div class="mt-8 space-y-8">
-      <div class="section-card rounded-2xl p-6">
-        <h2 class="text-2xl font-semibold text-gradient section-header mb-6" data-key="achievements_title"></h2>
+  <h2>Языки</h2>
+  <ul>
+    <li><strong>Русский:</strong> native</li>
+    <li><strong>Английский:</strong> technical</li>
+  </ul>
 
-        <div class="grid gap-4">
-          <div class="p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border border-blue-100">
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-sm font-medium text-gray-700" data-key="achievement_1"></p>
-            </div>
-          </div>
+  <hr>
 
-          <div class="p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border border-blue-100">
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-sm font-medium text-gray-700" data-key="achievement_2"></p>
-            </div>
-          </div>
+  <h2>Достижения</h2>
+  <ul>
+    <li>ICPC 2022–2023 — Northern Eurasia Finals (1/2)</li>
+    <li>ICPC 2023–2024 — Kazakhstan Octafinal (1/8)</li>
+    <li>ICPC 2024–2025 — Kazakhstan Quarterfinal (1/4)</li>
+    <li>ICPC 2025–2026 — Kazakhstan Quarterfinal (1/4)</li>
+    <li>1-е место — NetDay SDU 2023 (сети и кибербезопасность, Алматы)</li>
+    <li>1-е место — внутривузовская олимпиада по ML (распознавание объектов, АУЭС)</li>
+    <li>2-е место — Республиканская олимпиада по информатике 2024 (Turan University, Алматы)</li>
+    <li>3-е место — Республиканская олимпиада по информатике 2023 (Торайгыров университет, Павлодар)</li>
+    <li>2-е место — внутривузовская олимпиада по программированию 2022 (АУЭС, Алматы)</li>
+    <li>2-е место — Tech QyzPU Niğde Hack 2025 (ЖЕНПУ, Алматы)</li>
+    <li>Благодарственные письма от АУЭС (ежегодно)</li>
+    <li>Fortinet NSE Institute (FortiGate Firewall, Security Fabric, 2021)</li>
+    <li>Сертификаты о курсах Cisco, Fortinet</li>
+  </ul>
 
-          <div class="p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border border-blue-100">
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-sm font-medium text-gray-700" data-key="achievement_3"></p>
-            </div>
-          </div>
-
-          <div class="p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border border-blue-100">
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-sm font-medium text-gray-700" data-key="achievement_4"></p>
-            </div>
-          </div>
-
-          <div class="p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border border-blue-100">
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-sm font-medium text-gray-700" data-key="achievement_5"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-4 p-4 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl border border-blue-100">
-          <div class="flex items-center gap-3">
-            <div class="w-3 h-3 bg-blue-500 rounded-full flex-shrink-0"></div>
-            <p class="text-sm text-gray-700">
-              <span data-key="certificates_text"></span>
-              <a href="https://drive.google.com/drive/folders/1KE3vAfnHY_KKyviQARGv8TmY5dgrHOYd?usp=drive_link"
-                 class="contact-link text-blue-600 hover:text-blue-800 font-medium" data-key="link_text"></a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <script>
-    const i18n = {
-      en: {
-        position: "Backend Developer",
-        location: "Almaty, Kazakhstan • 21 years old",
-        motto: "Explicit is better than implicit.",
-        about_title: "About me — briefly",
-        about_1: "Love thinking through architecture, optimization and logging",
-        about_2: "Maintained PHP projects, developed from scratch with Django",
-        about_3: "Worked with LDAP, SharePoint, SMSC, Stripe",
-        about_4: "Hobby — competitive programming and algorithms (ICPC)",
-        about_5: "Graduated from Cisco Networking Academy (CCNA, CCNP, CCNA Security)",
-        experience_title: "Work Experience",
-        job_title: "Almaty University of Power Engineering and Telecommunications — Programmer",
-        job_period: "Feb 2024 — present (1 year 8 months)",
-        job_1: "Migration of internal services from PHP to Django",
-        job_2: "Development and maintenance of university websites: energo.university, cpk.aues.kz, recovery.aues.kz, stud-assist.aues.kz and others",
-        job_3: "Ticket system HelpDesk DIT (SharePoint + Power Automate)",
-        job_4: "Integrations with LDAP, SharePoint, Microsoft Automate, SMSC",
-        job_5: "FaceID application (WinForms C#), CLI image processing utilities",
-        projects_title: "Side Projects",
-        project_desc: "gaming services platform",
-        skills_title: "Skills",
-        skills_confident: "Confident:",
-        skills_intermediate: "Intermediate:",
-        skills_basic: "Basic:",
-        education_title: "Education",
-        edu_1: "Bachelor's, Computer Engineering and Software (2025)",
-        edu_2_title: "Computer Academy STEP",
-        edu_2a: "Programmer (Python, C++, C#, Django) — 2025",
-        edu_2b: "Network Engineer (Cisco CCNA/CCNP) — 2022",
-        languages_title: "Languages",
-        lang_russian: "Russian — native",
-        lang_english: "English — B1 (technical)",
-        achievements_title: "Achievements",
-        achievement_1: "ICPC Semifinalist (Eurasia Final)",
-        achievement_2: "1st Place at NetDay SDU 2023 (networking and cybersecurity)",
-        achievement_3: "1st Place in the AUES Internal ML Olympiad",
-        achievement_4: "2nd Place at Republican Computer Science Olympiad",
-        achievement_5: "Letters of appreciation from AUES University",
-        certificates_text: "Certificates: Cisco, Huawei, Fortinet —",
-        link_text: "link"
-      },
-      ru: {
-        position: "Backend‑разработчик",
-        location: "Алматы, Казахстан • 21 год",
-        motto: "Явное лучше неявного.",
-        about_title: "О себе — кратко",
-        about_1: "Люблю продумывать архитектуру, оптимизацию и логирование",
-        about_2: "Поддерживал PHP‑проекты, разрабатывал с нуля на Django",
-        about_3: "Работал с LDAP, SharePoint, SMSC, Stripe",
-        about_4: "Хобби — спортивное программирование и алгоритмы (ICPC)",
-        about_5: "Окончил Cisco Networking Academy (CCNA, CCNP, CCNA Security)",
-        experience_title: "Опыт работы",
-        job_title: "Алматинский университет энергетики и связи — Программист",
-        job_period: "Февраль 2024 — настоящее время (1 год 8 месяцев)",
-        job_1: "Миграция внутренних сервисов с PHP на Django",
-        job_2: "Разработка и поддержка сайтов: energo.university, cpk.aues.kz, recovery.aues.kz, stud-assist.aues.kz и др.",
-        job_3: "Тикет‑система HelpDesk DIT (SharePoint + Power Automate)",
-        job_4: "Интеграции с LDAP, SharePoint, Microsoft Automate, SMSC",
-        job_5: "Приложение FaceID (WinForms C#), CLI‑утилиты обработки изображений",
-        projects_title: "Сторонние проекты",
-        project_desc: "платформа игровых услуг",
-        skills_title: "Навыки",
-        skills_confident: "Уверенно:",
-        skills_intermediate: "Средний уровень:",
-        skills_basic: "Базово:",
-        education_title: "Образование",
-        edu_1: "Бакалавр, Вычислительная техника и программное обеспечение (2025)",
-        edu_2_title: "Компьютерная академия ШАГ",
-        edu_2a: "Программист (Python, C++, C#, Django) — 2025",
-        edu_2b: "Сетевой инженер (Cisco CCNA/CCNP) — 2022",
-        languages_title: "Языки",
-        lang_russian: "Русский — родной",
-        lang_english: "Английский — B1 (технический)",
-        achievements_title: "Достижения",
-        achievement_1: "ICPC — полуфиналист (Eurasia Final)",
-        achievement_2: "1 место на NetDay SDU 2023 (сетевые технологии и кибербезопасность)",
-        achievement_3: "1 место во внутренней олимпиаде АУЭС по машинному обучению",
-        achievement_4: "2 место на Республиканской олимпиаде по информатике",
-        achievement_5: "Благодарственные письма от университета АУЭС",
-        certificates_text: "Сертификаты: Cisco, Huawei, Fortinet —",
-        link_text: "ссылка"
-      },
-      kk: {
-        position: "Backend әзірлеуші",
-        location: "Алматы, Қазақстан • 21 жаста",
-        motto: "Айқын — айқын емес нәрседен жақсы.",
-        about_title: "Мен туралы — қысқаша",
-        about_1: "Архитектура, оңтайландыру және логтауды ойластыруды жақсы көремін",
-        about_2: "PHP жобаларын қолдадым, Django-да нөлден жасадым",
-        about_3: "LDAP, SharePoint, SMSC, Stripe-пен жұмыс істедім",
-        about_4: "Хобби — бәсекелік бағдарламалау және алгоритмдер (ICPC)",
-        about_5: "Cisco Networking Academy (CCNA, CCNP, CCNA Security) тәмамдадым",
-        experience_title: "Жұмыс тәжірибесі",
-        job_title: "Алматы энергетика және байланыс университеті — Бағдарламашы",
-        job_period: "2024 ақпан — қазіргі уақытқа дейін (1 жыл 8 ай)",
-        job_1: "Ішкі сервистерді PHP-ден Django-ға көшіру",
-        job_2: "Университет сайттарын әзірлеу және қолдау: energo.university, cpk.aues.kz, recovery.aues.kz, stud-assist.aues.kz және басқалар",
-        job_3: "HelpDesk DIT тикет-жүйесі (SharePoint + Power Automate)",
-        job_4: "LDAP, SharePoint, Microsoft Automate, SMSC интеграциялары",
-        job_5: "FaceID қолданбасы (WinForms C#), CLI кескін өңдеу утилиталары",
-        projects_title: "Жобалар",
-        project_desc: "гейминг сервистер платформасы",
-        skills_title: "Дағдылар",
-        skills_confident: "Сенімді:",
-        skills_intermediate: "Орташа деңгей:",
-        skills_basic: "Базалық:",
-        education_title: "Білім",
-        edu_1: "Бакалавр, Есептеу техникасы және бағдарламалық қамтамасыз ету (2025)",
-        edu_2_title: "STEP компьютер академиясы",
-        edu_2a: "Бағдарламашы (Python, C++, C#, Django) — 2025",
-        edu_2b: "Желі инженері (Cisco CCNA/CCNP) — 2022",
-        languages_title: "Тілдер",
-        lang_russian: "Орыс — ана тілі",
-        lang_english: "Ағылшын — B1 (техникалық)",
-        achievements_title: "Жетістіктер",
-        achievement_1: "ICPC жартылай финалисі (Eurasia Final)",
-        achievement_2: "NetDay SDU 2023 (желі және киберқауіпсіздік) — 1 орын",
-        achievement_3: "АУЭС ішкі ML олимпиадасы — 1 орын",
-        achievement_4: "Республикалық информатика олимпиадасы — 2 орын",
-        achievement_5: "АУЭС университетінің алғыс хаттары",
-        certificates_text: "Сертификаттар: Cisco, Huawei, Fortinet —",
-        link_text: "сілтеме"
-      }
-    };
-
-    function setLang(lang) {
-      const dict = i18n[lang] || i18n.en;
-      document.querySelectorAll('[data-key]').forEach(el => {
-        const key = el.getAttribute('data-key');
-        if (dict[key] !== undefined) {
-          el.textContent = dict[key];
-        }
-      });
-
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      setLang('en');
-
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const lang = btn.getAttribute('data-lang');
-          setLang(lang);
-        });
-      });
-    });
-  </script>
 </body>
+
 </html>
