@@ -1,299 +1,154 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Руслан Маликов — Резюме</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Руслан Маликов — Junior Software Engineer. Java и Python: микросервисы, платёжные интеграции, миграция веб-сервисов и диагностика приложений в эксплуатации.">
+  <title>Руслан Маликов — Backend-разработка на Java и Python</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23182331'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='white'%3ERM%3C/text%3E%3C/svg%3E">
   <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      font-size: 14px;
-      color: #222;
-      line-height: 1.6;
-      margin: 40px auto;
-      max-width: 750px;
-      padding: 0 20px;
-      background: #fff;
-      word-wrap: break-word;
+    :root { --paper: #fff; --canvas: #eef1f5; --ink: #182331; --muted: #526174; --line: #dce2ea; --accent: #23566b; font-family: "Segoe UI Variable", "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--canvas); font-synthesis: none; -webkit-text-size-adjust: 100%; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-size: 14px; line-height: 1.55; }
+    a { color: inherit; text-decoration-color: #aab4c1; text-underline-offset: 3px; overflow-wrap: anywhere; }
+    a:hover { color: var(--accent); text-decoration-color: currentColor; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    h1, h2, h3, p, ul, dl { margin: 0; }
+    h1, h2, h3 { line-height: 1.25; }
+    h2, h3 { font-weight: 650; }
+    .skip-link { position: absolute; top: 12px; left: 12px; padding: 10px 16px; transform: translateY(-160%); background: var(--paper); z-index: 2; }
+    .skip-link:focus { transform: none; }
+    .resume { max-width: 1000px; margin: 32px auto 48px; padding: 46px 52px 35px; background: var(--paper); border: 1px solid var(--line); border-radius: 3px; box-shadow: 0 10px 38px #1823310b; }
+    .identity { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+    h1 { font-size: 42px; font-weight: 720; letter-spacing: -1.6px; }
+    .role { margin-top: 9px; font-size: 17px; font-weight: 600; }
+    .location { padding-top: 8px; text-align: right; color: var(--muted); font-size: 13px; }
+    .specialization { margin-top: 13px; font-size: 15px; color: var(--accent); font-weight: 550; }
+    .contacts { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-style: normal; }
+    .contact-primary, .contact-profiles { display: flex; flex-wrap: wrap; gap: 7px 21px; list-style: none; padding: 0; font-size: 12.5px; }
+    .contact-primary { font-weight: 550; }
+    .contact-profiles { margin-top: 8px; color: var(--muted); }
+    .section { margin-top: 28px; }
+    .section > h2 { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; font-size: 17px; letter-spacing: -.2px; }
+    .section > h2::after { content: ""; height: 1px; flex: 1; background: var(--line); }
+    .profile { max-width: 84ch; color: #354457; }
+    .profile p + p { margin-top: 8px; }
+    .case { display: grid; grid-template-columns: 178px minmax(0, 1fr); gap: 25px; padding: 15px 0; }
+    .case:first-of-type { padding-top: 0; }
+    .case + .case { border-top: 1px solid #e8ecf1; }
+    .case h3 { font-size: 14px; color: var(--ink); }
+    .case-stack { margin-top: 7px; color: var(--muted); font-size: 11.5px; line-height: 1.5; }
+    .case ul { padding-left: 17px; }
+    .case li { padding-left: 2px; }
+    .case li + li { margin-top: 7px; }
+    .skill-row { display: grid; grid-template-columns: 178px minmax(0, 1fr); gap: 25px; padding: 7px 0; }
+    .skill-row + .skill-row { border-top: 1px solid #edf0f4; }
+    .skill-row dt { font-size: 12px; color: var(--muted); }
+    .skill-row dd { margin: 0; font-size: 12.5px; }
+    .additional { margin-top: 12px; color: var(--muted); font-size: 12.5px; }
+    .additional strong { color: var(--ink); font-weight: 600; }
+    .closing-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; }
+    .closing-grid p { font-size: 12.5px; }
+    .closing-grid p + p { margin-top: 8px; }
+    .languages { padding-top: 14px; margin-top: 20px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+    .languages p { display: inline; }
+    .languages p + p { margin-left: 24px; }
+    @media (max-width: 1060px) { .resume { margin-left: 20px; margin-right: 20px; padding: 36px; } }
+    @media (max-width: 640px) {
+      body { font-size: 13px; }
+      .resume { margin: 0; padding: 28px 22px; border: 0; border-radius: 0; box-shadow: none; }
+      .identity { display: block; }
+      h1 { font-size: 35px; letter-spacing: -1.2px; }
+      .role { font-size: 16px; }
+      .location { padding: 0; margin-top: 10px; text-align: left; }
+      .specialization { font-size: 14px; }
+      .contact-primary, .contact-profiles { gap: 9px 17px; }
+      .case { grid-template-columns: 1fr; gap: 10px; padding: 18px 0; }
+      .case-stack { margin-top: 4px; }
+      .skill-row { grid-template-columns: 1fr; gap: 4px; padding: 9px 0; }
+      .closing-grid { grid-template-columns: 1fr; gap: 0; }
+      .languages p { display: block; }
+      .languages p + p { margin: 5px 0 0; }
     }
-
-    h1,
-    h2,
-    h3 {
-      margin-top: 1.5em;
-      margin-bottom: 0.3em;
-    }
-
-    h1 {
-      font-size: 24px;
-    }
-
-    h2 {
-      font-size: 18px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 2px;
-    }
-
-    h3 {
-      font-size: 16px;
-      font-weight: normal;
-    }
-
-    a {
-      color: #007acc;
-      text-decoration: none;
-      word-break: break-word;
-    }
-
-    ul {
-      padding-left: 1.2em;
-      margin: 0;
-    }
-
-    li {
-      margin-bottom: 0.2em;
-    }
-
-    .meta {
-      color: #666;
-      font-size: 13px;
-    }
-
-    .contact {
-      margin-bottom: 1.5em;
-      line-height: 1.5;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 1.5em 0;
-    }
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 600px) {
-
-      body {
-        margin: 10px auto;
-        padding: 0 14px;
-        font-size: 13px;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      h2 {
-        font-size: 16px;
-      }
-
-      h3 {
-        font-size: 14px;
-      }
-
-      .contact {
-        font-size: 13px;
-      }
-
-      ul {
-        padding-left: 1em;
-      }
-
-      hr {
-        margin: 1em 0;
-      }
-    }
-
-    /* ================= PRINT SAFE ================= */
-
+    @page { size: A4; margin: 13mm 14mm 14mm; }
     @media print {
-      body {
-        margin: 0;
-        max-width: none;
-      }
+      :root { background: #fff; }
+      body { font-size: 9.5pt; line-height: 1.4; }
+      .skip-link { display: none; }
+      .resume { width: auto; max-width: none; margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; }
+      .identity { display: flex; }
+      h1 { font-size: 27pt; letter-spacing: -.8pt; }
+      .role { margin-top: 5pt; font-size: 12pt; }
+      .location { margin: 0; padding-top: 4pt; text-align: right; font-size: 9pt; }
+      .specialization { margin-top: 7pt; font-size: 10pt; }
+      .contacts { margin-top: 11pt; padding-top: 9pt; }
+      .contact-primary, .contact-profiles { font-size: 8.5pt; gap: 4pt 13pt; }
+      .contact-profiles { margin-top: 5pt; }
+      .section { margin-top: 17pt; }
+      .section > h2 { margin-bottom: 9pt; font-size: 12pt; break-after: avoid; }
+      .profile p + p { margin-top: 5pt; }
+      .case { grid-template-columns: 34mm minmax(0, 1fr); gap: 6mm; padding: 10pt 0; break-inside: avoid; }
+      .case h3 { font-size: 10pt; }
+      .case-stack { font-size: 8pt; margin-top: 4pt; }
+      .case li + li { margin-top: 5pt; }
+      .skill-row { grid-template-columns: 34mm minmax(0, 1fr); gap: 6mm; padding: 4pt 0; break-inside: avoid; }
+      .skill-row dt { font-size: 8.5pt; }
+      .skill-row dd, .additional { font-size: 9pt; }
+      .additional { margin-top: 7pt; }
+      .closing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20pt; break-inside: avoid; }
+      .closing-grid p { font-size: 9pt; }
+      .closing-grid p + p { margin-top: 5pt; }
+      .languages { padding-top: 9pt; margin-top: 12pt; font-size: 8.5pt; }
+      .languages p { display: inline; }
+      .languages p + p { margin: 0 0 0 18pt; }
+      a { color: inherit; text-decoration: none; }
     }
   </style>
 </head>
-
 <body>
-
-  <h1>Руслан Маликов</h1>
-  <div class="meta"><strong>Fullstack Web</strong><br>Алматы, Казахстан • 22 года</div>
-
-  <div class="contact">
-    <strong>Email:</strong>
-    <a href="mailto:mal.rus.ana@yandex.kz">mal.rus.ana@yandex.kz</a>,
-    <a href="mailto:mal.rus.ana@gmail.com">mal.rus.ana@gmail.com</a><br>
-
-    <strong>Телефон:</strong> +7 700 555 99 88<br>
-
-    <strong>Ссылки:</strong>
-    <a href="https://github.com/yarusihh">GitHub</a> 
-    <a href="https://t.me/yarusihhh">Telegram</a> 
-    <a href="https://www.linkedin.com/in/ruslan-malikov-962206376">LinkedIn</a> 
-    <a href="https://www.credly.com/users/ruslan-malikov.b03ad664">Credly</a> 
-    <a href="https://yarusihh.github.io/yarusihh/">Resume Website</a> 
-    <a href="https://icpc.global/ICPCID/LHJP61WYGDBF">ICPC Global Profile</a><br>
-
-    <strong>Сертификаты:</strong>
-    <a href="https://drive.google.com/drive/folders/1KE3vAfnHY_KKyviQARGv8TmY5dgrHOYd?usp=drive_link">папка</a>
-  </div>
-
-  <hr>
-
-  <h2>О себе — кратко</h2>
-  <ul>
-    <li>Из интересного: Будучи студентом, разработали как основной сайт университета, так и внутренние порталы/сервисы с
-      PHP на Django</li>
-    <li>Из интересного: Резюме хранится в JSON-формате на Git, после чего конвертируется в HTML, а затем в PDF</li>
-    <li>Люблю продумывать архитектуру, оптимизацию, метрики и логирование</li>
-    <li>Поддерживал проекты на PHP, разрабатывал современные веб-сервисы</li>
-    <li>Окончил Cisco Networking Academy (CCNA, CCNP, CCNA Security)</li>
-    <li>Интересуюсь спортивным программированием, хакатонами и CTF</li>
-    <li>Explicit is better than implicit</li>
-    <li>С 2026 в работе активно применяю ИИ для прикладных/тонких задач по коду</li>
-  </ul>
-
-  <hr>
-
-  <h2>Навыки</h2>
-  <ul>
-    <li><strong>Уверенно:</strong> Python, Django/DRF, Базы данных (SQL: PostgreSQL, NoSQL: MongoDB, Redis), REST
-      архитектура, Сети TCP/IP OSI L2 L3, Docker, Linux, Nginx, Git/Github/Gitlab, HTML/CSS</li>
-    <li><strong>Средне:</strong> Java/Spring Boot, C#/.NET, JavaScript, PHP (Yii2), SharePoint</li>
-    <li><strong>Базово:</strong> Flutter, Machine Learning, React</li>
-  </ul>
-
-  <hr>
-
-  <h2>Технический опыт</h2>
-  <ul>
-    <li>Асинхронность и многопоточность</li>
-    <li>Паттерны проектирования</li>
-    <li>Авторизация, сессии и работа с токенами</li>
-    <li>Вебхуки и событийные интеграции (включая Stripe)</li>
-    <li>Разработка Telegram-ботов и Discord-ботов</li>
-    <li>Опыт с Flask и FastAPI</li>
-    <li>Опыт разработки на React</li>
-    <li>Интеграции внешних API</li>
-    <li>Разработка десктоп-приложений на PyQt5/PyQt6</li>
-    <li>Опыт с PyDivert и WinDivert (перехват и анализ сетевых пакетов)</li>
-    <li>Работа с кешированием (in-memory, file-based, TTL-механизмы)</li>
-    <li>Деплой и сопровождение backend-сервисов (Docker, Linux)</li>
-    <li>Понимание принципов работы компьютера (оперативная память, стек/куча, адресация, смещения, виртуальная память)
-    </li>
-    <li>Работа с сетевыми сервисами (DNS, VPN, почтовые сервисы), настройка и развертывание</li>
-    <li>Java backend (Spring Boot, REST API)</li>
-    <li>Работа с MongoDB и Redis</li>
-    <li>Интеграция сервисов через Kafka</li>
-    <li>Trello</li>
-    <li>GitHub</li>
-    <li>GitLab</li>
-  </ul>
-
-  <hr>
-
-  <h2>Опыт работы</h2>
-
-  <h3>НАО Алматинский университет энергетики и связи (AUES) — Программист</h3>
-  <div class="meta">2024-02 — продолжается • 2 года (продолжается)</div>
-  <ul>
-    <li>Миграция внутренних сервисов с PHP на современные веб-стеки</li>
-    <li>Разработка и поддержка сайтов с нуля: <a href="https://energo.university/">energo.university</a>, cpk.aues.kz,
-      ipphone.aues.kz, recovery.aues.kz, stud-assist.aues.kz и др.</li>
-    <li>Разработка проекта: <a href="https://nyfa-kaz.com/en/">nyfa-kaz.com</a> (вебхуки, обмен данными о студентах с
-      Нью-Йорком)</li>
-    <li>Интеграция с Банком ЦентрКредит (эквайринг/вебхуки)</li>
-    <li>Разработка тикет-системы HelpDesk DIT (MS SharePoint + MS Power Automate)</li>
-    <li>Интеграции LDAP, SharePoint, Microsoft Automate, SMSC</li>
-    <li>Сетевые настройки и мониторинг внутренних сервисов</li>
-    <li>FaceID десктоп-приложение (WinForms C#)</li>
-    <li>Python CLI-утилиты для обработки изображений перед загрузкой в базу Hikvision</li>
-  </ul>
-
-  <h3>ТОО BARAKAT SOLUTIONS — Программист</h3>
-  <div class="meta">2025-10 — продолжается</div>
-  <div class="meta">Мобильное приложение в Google Play и iOS</div>
-  <ul>
-    <li><strong>Стек:</strong> Flutter</li>
-  </ul>
-
-  <hr>
-
-  <h2>Фриланс / коммерческие проекты</h2>
-
-  <p><strong>boost.house</strong> — paid freelance project<br>
-    <span class="meta">
-      Коммерческая платформа игровых услуг с многовалютной, динамической и мультиязычной логикой: многоэтапная обработка
-      заказов, управление состояниями и бизнес-инвариантами.
-      Из интересного: каждая ошибка на сайте обрабатывается гарантированно и собирается умный отчёт о том, сколько и
-      какие страницы видели пользователи по важности.
-      <br><strong>Стек:</strong> Django, PostgreSQL, Payments интеграция с Stripe (эквайринг/вебхуки), REST API, Logging
-      <br><strong>URL:</strong> <a href="https://boost.house">https://boost.house</a>
-    </span>
-  </p>
-
-  <hr>
-
-  <h2>Pet-проекты</h2>
-  <p><strong>Desktop Utility</strong><br>
-    <span class="meta">Десктоп-утилита для анализа сетевого трафика и действий клавиатуры. Использовалась мной и
-      несколькими реальными пользователями.</span>
-  </p>
-  <ul>
-    <li>Интерфейс на PyQt5 → PyQt6</li>
-    <li>Многопоточная обработка</li>
-    <li>Перехват и фильтрация трафика (PyDivert / WinDivert)</li>
-    <li>Оптимизация и приоритезация сетевого трафика на уровне приложений</li>
-    <li>Перехват действий клавиатуры (hotkeys / event hooks)</li>
-  </ul>
-  <div class="meta"><strong>Технологии:</strong> PyQt5/PyQt6, Python threading, PyDivert / WinDivert</div>
-
-  <hr>
-
-  <h2>Образование</h2>
-  <ul>
-    <li><strong>Алматинский университет энергетики и связи (AUES)</strong> — Бакалавриат, Вычислительная техника и ПО
-      (2025) — 4 года (очная)</li>
-    <li><strong>Компьютерная академия ШАГ</strong> — Сетевой инженер, Cisco CCNA/CCNP, Linux (2022) — оффлайн</li>
-    <li><strong>Компьютерная академия ШАГ</strong> — Программист, Python/Django, C++, C#, Docker (2025) — оффлайн</li>
-    <li><strong>Kaspi Lab [SE]</strong> — Java Backend (2025) — 6 недель (Java 11–21, Spring Boot)</li>
-    <li><strong>Учебно-тренировочные сборы Федерации спортивного программирования Казахстана</strong> — 2023 (26 июля —
-      6 августа) — 11 дней<br>
-      <span class="meta">Второй дивизион сборов по спортивному программированию</span>
-    </li>
-  </ul>
-
-  <hr>
-
-  <h2>Языки</h2>
-  <ul>
-    <li><strong>Русский:</strong> native</li>
-    <li><strong>Английский:</strong> technical</li>
-  </ul>
-
-  <hr>
-
-  <h2>Достижения</h2>
-  <ul>
-    <li>ICPC 2022–2023 — Northern Eurasia Finals (1/2)</li>
-    <li>ICPC 2023–2024 — Kazakhstan Octafinal (1/8)</li>
-    <li>ICPC 2024–2025 — Kazakhstan Quarterfinal (1/4)</li>
-    <li>ICPC 2025–2026 — Kazakhstan Quarterfinal (1/4)</li>
-    <li>1-е место — NetDay SDU 2023 (сети и кибербезопасность, Алматы)</li>
-    <li>1-е место — внутривузовская олимпиада по ML (распознавание объектов, АУЭС)</li>
-    <li>2-е место — Республиканская олимпиада по информатике 2024 (Turan University, Алматы)</li>
-    <li>3-е место — Республиканская олимпиада по информатике 2023 (Торайгыров университет, Павлодар)</li>
-    <li>2-е место — внутривузовская олимпиада по программированию 2022 (АУЭС, Алматы)</li>
-    <li>2-е место — Tech QyzPU Niğde Hack 2025 (ЖЕНПУ, Алматы)</li>
-    <li>Благодарственные письма от АУЭС (ежегодно)</li>
-    <li>Fortinet NSE Institute (FortiGate Firewall, Security Fabric, 2021)</li>
-    <li>Сертификаты о курсах Cisco, Fortinet</li>
-  </ul>
-
+  <a class="skip-link" href="#resume">Перейти к резюме</a>
+  <main class="resume" id="resume">
+    <header>
+      <div class="identity">
+        <div><h1>Руслан Маликов</h1><p class="role">Junior Software Engineer</p></div>
+        <div class="location"><p>Алматы, Казахстан</p></div>
+      </div>
+      <p class="specialization">Backend-разработка на Java и Python</p>
+      <address class="contacts" aria-label="Контакты">
+        <ul class="contact-primary">
+          <li><a href="mailto:mal.rus.ana@yandex.kz">mal.rus.ana@yandex.kz</a></li>
+          <li><a href="mailto:mal.rus.ana@gmail.com">mal.rus.ana@gmail.com</a></li>
+          <li><a href="tel:+77068570000">+7 706 857 00 00</a></li>
+        </ul>
+        <ul class="contact-profiles"><li><a href="https://github.com/yarusihh">GitHub</a></li><li><a href="https://t.me/yarusihh">Telegram</a></li><li><a href="https://www.linkedin.com/in/ruslan-malikov-962206376/">LinkedIn</a></li><li><a href="https://yarusihh.github.io/yarusihh/">Онлайн-резюме</a></li><li><a href="https://www.credly.com/users/ruslan-malikov.b03ad664">Credly</a></li><li><a href="https://icpc.global/ICPCID/LHJP61WYGDBF">ICPC</a></li></ul>
+      </address>
+    </header>
+    <section class="section" aria-labelledby="profile">
+      <h2 id="profile">Профиль</h2>
+      <div class="profile">
+        <p>Участвую в разработке высоконагруженных бизнес-микросервисов на Java и Spring: от реализации бизнес-логики и интеграций до диагностики приложений в эксплуатации.</p>
+        <p>Дополнительный опыт — разработка веб-сервисов на Python / Django, миграция приложений с PHP, платёжные интеграции и автоматизация внутренних процессов.</p>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="experience">
+      <h2 id="experience">Опыт разработки</h2>
+      <article class="case"><div><h3>Высоконагруженные микросервисы</h3><p class="case-stack">Java / Spring</p></div><ul><li>Участие в командной разработке бизнес-микросервисов на Java и Spring: реализация бизнес-логики, развитие функциональности и сопровождение приложений в эксплуатации.</li><li>Работа с данными в PostgreSQL, Yashan, MongoDB и Redis; межсервисные интеграции с использованием Kafka и TIBCO.</li></ul></article>
+      <article class="case"><div><h3>Платежи и обработка заказов</h3><p class="case-stack">Django / PostgreSQL / Stripe</p></div><ul><li>Реализация многоэтапной обработки заказов с управлением состояниями и соблюдением бизнес-инвариантов. Поддержка нескольких валют, языков и динамической бизнес-логики.</li><li>Интеграция эквайринга и платёжных вебхуков, автоматическая сверка платежей; опыт интеграции Stripe.</li><li>Централизованная обработка ошибок и отчётность о посещённых пользователями страницах с учётом их приоритета.</li></ul></article>
+      <article class="case"><div><h3>Веб-сервисы и миграция приложений</h3><p class="case-stack">Python / Django / REST API</p></div><ul><li>Разработка с нуля и сопровождение сайтов, внутренних порталов и CRM-панелей. Участие в миграции сервисов с PHP на Python / Django.</li><li>Разработка REST API, интеграция внешних систем и обмен данными через вебхуки. Реализация авторизации, сессий и работы с токенами.</li></ul></article>
+      <article class="case"><div><h3>Эксплуатация и диагностика</h3><p class="case-stack">Метрики / логи / Kubernetes</p></div><ul><li>Диагностика проблем, устранение ошибок и участие в поддержке стабильной работы сервисов на этапах разработки и эксплуатации.</li><li>Мониторинг метрик и состояния приложений в Grafana и Prometheus; анализ логов в ClickHouse и VictoriaLogs.</li><li>Контроль состояния приложений и развёртываний в Kubernetes с использованием Rancher и Portainer. Опыт развёртывания и сопровождения backend-сервисов с Docker, Linux и Nginx.</li></ul></article>
+      <article class="case"><div><h3>Корпоративные системы и автоматизация</h3><p class="case-stack">SharePoint / Power Automate / Python</p></div><ul><li>Разработка тикет-системы на SharePoint и Power Automate; интеграции с LDAP, SMSC и внутренними сервисами.</li><li>Разработка CLI-утилит на Python для подготовки изображений к загрузке в базу и приложения FaceID на C# / WinForms. Опыт разработки Telegram-ботов и Discord-ботов.</li></ul></article>
+    </section>
+    <section class="section" aria-labelledby="skills">
+      <h2 id="skills">Технический стек</h2>
+      <dl><div class="skill-row"><dt>Backend</dt><dd>Java, Spring / Spring Boot; Python, Django / DRF; REST API; Flask, FastAPI</dd></div><div class="skill-row"><dt>Данные и интеграции</dt><dd>PostgreSQL, Yashan, MongoDB, Redis, SQLite; Kafka, TIBCO; вебхуки, Stripe, LDAP, SMSC</dd></div><div class="skill-row"><dt>Эксплуатация</dt><dd>Docker, Linux, Nginx; мониторинг приложений и развёртываний в Kubernetes; Rancher, Portainer</dd></div><div class="skill-row"><dt>Наблюдаемость</dt><dd>Grafana, Prometheus; VictoriaLogs, ClickHouse для анализа логов</dd></div><div class="skill-row"><dt>Разработка в команде</dt><dd>Git, GitHub, GitLab; Jira, Confluence, Trello</dd></div></dl>
+      <p class="additional"><strong>Дополнительный опыт:</strong> C# / .NET / WinForms, PHP / Yii2, JavaScript, HTML / CSS, Bootstrap, React; асинхронное программирование, многопоточность, паттерны проектирования и кеширование с TTL. Подготовка в области TCP/IP, OSI L2 / L3; настройка DNS, VPN и почтовых сервисов.</p>
+    </section>
+    <div class="closing-grid">
+      <section class="section" aria-labelledby="education"><h2 id="education">Профильная подготовка</h2><p>Бакалавриат: вычислительная техника и программное обеспечение.</p><p>Подготовка по Java Backend, Python / Django, Linux и сетям Cisco: CCNA, CCNP, CCNA Security.</p></section>
+      <section class="section" aria-labelledby="algorithms"><h2 id="algorithms">Алгоритмы и соревнования</h2><p>Полуфиналист ICPC, Northern Eurasia Finals. Призовые места республиканских олимпиад по информатике и хакатонов.</p><p>Первое место в соревновании по сетям и кибербезопасности.</p></section>
+    </div>
+    <footer class="languages"><p><strong>Русский:</strong> родной.</p><p><strong>Английский:</strong> B1, технический английский.</p></footer>
+  </main>
 </body>
-
 </html>
