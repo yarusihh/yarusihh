@@ -32,6 +32,3 @@
 
 ---
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=yarusihh&style=flat-square&color=blue" alt="profile views"/>
-</p>
